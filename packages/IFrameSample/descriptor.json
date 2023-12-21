@@ -1,0 +1,75 @@
+﻿{
+  "Descriptor": {
+    "UId": "80d59e2d-c6ff-48ec-bd4a-1d97fc501a00",
+    "PackageVersion": "7.8.0",
+    "Name": "IFrameSample",
+    "Type": 1,
+    "ModifiedOnUtc": "\/Date(1703146416000)\/",
+    "Maintainer": "Creatio",
+    "ProjectPath": "Files/IFrameSample.csproj",
+    "Description": "#OriginalMaintainer:Customer",
+    "DependsOn": [
+      {
+        "UId": "243675c8-b31d-0dec-5336-2e282f5f48c1",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtBulkEmailInC360",
+        "Type": 1,
+        "InstallBehavior": 1
+      },
+      {
+        "UId": "2ecba2bd-b810-47a5-a1b1-08c888529d6c",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtCustomer360App",
+        "Type": 1
+      },
+      {
+        "UId": "365dd0e1-0da9-04be-0256-cc2661458c26",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtOrder",
+        "Type": 1
+      },
+      {
+        "UId": "3c5755e6-19fe-aa4b-2b66-f042137159f0",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtTouchPointInC360",
+        "Type": 1,
+        "InstallBehavior": 1
+      },
+      {
+        "UId": "47ae1ea6-e608-a3fd-44ac-18726f40438c",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtMLLeadConversion",
+        "Type": 1
+      },
+      {
+        "UId": "5c011712-49c2-b1cc-c9da-8751f2879b1d",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtOpportunity",
+        "Type": 1
+      },
+      {
+        "UId": "5da6331b-85eb-139e-4cc8-37cf67b03b0f",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtRecommendedProduct",
+        "Type": 1
+      },
+      {
+        "UId": "789c617e-760f-4576-a608-ee12728eae0a",
+        "PackageVersion": "7.8.0",
+        "Name": "MarketingCampaign"
+      },
+      {
+        "UId": "a2a415ef-1679-4f0e-85a3-92c34ac5fdbe",
+        "PackageVersion": "1.0.0",
+        "Name": "MrktApolloInC360",
+        "Type": 1,
+        "InstallBehavior": 1
+      },
+      {
+        "UId": "bda2916d-1b8a-1fa2-ab37-43798c48146f",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtSLMITILService"
+      }
+    ]
+  }
+}
