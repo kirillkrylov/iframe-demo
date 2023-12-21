@@ -56,10 +56,8 @@ define("Contacts_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 						"rowSpan": 1
 					},
 					"type": "usr.Demo",
-					"src":"https://www.creatio.com/sites/default/files/pages/main/freedom-logo.svg",
-					"title":"YouTube video player",
-					"frameborder":"0",
-					"allow":"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					"iframesrc":"https://quote.us1.proscloud.com/quotex-ui-server/login?tenant_id=c18ff519-f62e-450b-a900-bfbe95e881a9&amp;env=c18ff519-f62e-450b-a900-bfbe95e881a9&amp;environment_id=dev&amp;user_id=clafont@pros.stddemos.com&amp;session_id=64761d9c-ca5d-461a-8c0d-d1513ce8ed8f&amp;quote_id=3181169f-6030-4cc0-9bcb-a8ec598278e2&amp;model_id=QM-58318152624543d4bbbcf140ec3b8982&amp;quote_step_id=CatalogStep&amp;theme_name=&amp;ui_lang=en_US&amp;timezone=GMT-08%253A00&amp;integration_type=SFDC&amp;integration_endpoint=https://pros-stddemos-dev-ed.my.salesforce.com/a0F4P00000Ru6nQUAR&amp;iam=@pros.stddemos.com&amp;standalone=false",
+					"title":"quotes"
 				},
 				"parentName": "GridContainer_vz2su0o",
 				"propertyName": "items",

@@ -1,4 +1,5 @@
 import { Component, Input, OnDestroy, OnInit, ViewEncapsulation } from "@angular/core";
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import {
 	CrtInput,
 	CrtInterfaceDesignerItem,
@@ -7,14 +8,13 @@ import {
 import { SubscriptionLike } from "rxjs";
 
 
+
 @CrtViewElement({
 	selector: "usr-demo",
 	type: "usr.Demo",
 	inputs: {
-		src: "",
-		title: "",
-		frameborder: "",
-		allow: "",
+		iframesrc: "",
+		title: ""
 	},
 })
 @CrtInterfaceDesignerItem({
@@ -34,26 +34,27 @@ import { SubscriptionLike } from "rxjs";
 
 export class DemoComponent implements OnInit, OnDestroy {
 
+	DomSanitizer: DomSanitizer
+	safeSrc : SafeResourceUrl = "";
+
 	private _subscription?: SubscriptionLike;
-	constructor() {
-		this.title = "YouTube video player";
-		this.src = "https://www.youtube.com/embed/IbYrd4QyMAY?si=tiSba_b1NWSUzO7e";
-	 }
+	constructor(domSanitizer: DomSanitizer) {
+		this.DomSanitizer = domSanitizer;
+	}
 
 	//#region Inputs
-	@Input()
-	public loading = false;
 
 	//#region Src
-	private _src : string = "https://www.youtube.com/embed/IbYrd4QyMAY?si=tiSba_b1NWSUzO7e";
-	public get src() : string {
-		return this._src;
+	private _iframesrc : string = "";
+	public get iframesrc() : string {
+		return this._iframesrc;
 	}
 
 	@Input() 
 	@CrtInput()
-	public set src(v : string) {
-		this._src = v;
+	public set iframesrc(v : string) {
+		this._iframesrc = v;
+		this.safeSrc = this.DomSanitizer.bypassSecurityTrustResourceUrl(v);
 	}
 	//#endregion
 
@@ -75,10 +76,6 @@ export class DemoComponent implements OnInit, OnDestroy {
 
 	ngOnInit(): void {
 		
-	}
-
-	public showAlert() {
-		alert("Congrats, welcome to Freedom!");
 	}
  	 public ngOnDestroy() {
 		this._subscription?.unsubscribe();
